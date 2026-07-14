@@ -826,7 +826,9 @@ body {
 @media screen and (max-width:768px){
 
     /* Ẩn ngày tháng */
-    .date__of__birth{
+    .date__of__birth,
+    .content .right .day,
+    .content .right .month{
         display:none !important;
     }
 
@@ -843,39 +845,34 @@ body {
         height:auto !important;
     }
 
-    /* Nội dung thư */
+    /* Chuyển ảnh và chữ thành 1 cột */
     .letter__border .letter .content__letter{
         display:flex;
         flex-direction:column;
         align-items:center;
+        justify-content:center;
         height:auto !important;
         padding:15px;
     }
 
-    /* Bỏ chia đôi và xóa sọc */
-    .letter__border .letter .content__letter .left,
-    .letter__border .letter .content__letter .right{
-        width:100%;
-    }
-
+    /* Cột trái */
     .letter__border .letter .content__letter .left{
-        border-right:none !important;
+        width:100% !important;
+        border:none !important;
+        padding:0 !important;
+        margin:0 auto 20px;
         display:flex;
         justify-content:center;
         align-items:center;
-        padding:0;
-        margin-bottom:20px;
     }
 
     /* Ảnh */
     .content__letter .left #heart__letter{
-        width:220px;
-        height:300px;
+        width:220px !important;
+        height:300px !important;
         object-fit:cover;
         display:block;
         margin:0 auto;
-        border:5px solid #fff;
-        border-radius:18px;
     }
 
     /* Tim */
@@ -883,8 +880,9 @@ body {
         transform:scale(.8);
     }
 
-    /* Khung chữ */
-    .content__letter .right{
+    /* Cột phải */
+    .letter__border .letter .content__letter .right{
+        width:100% !important;
         position:static;
         text-align:left;
     }
