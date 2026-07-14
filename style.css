@@ -688,11 +688,40 @@ body {
     }
 
 
-    /* button */
-    .btn{
+    @media screen and (max-width:768px){
+
+    .left .btn{
+
         position:absolute;
-        bottom:-80px;
+
+        top:520px;   /* chỉnh độ cao nút dưới ảnh Misa */
+
+        left:0;
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:center;
+
+        z-index:5;
+
+        transform:scale(0);
+
+        animation:scaleCricle 2s 6s forwards ease-in-out;
     }
+
+
+    #btn__letter{
+
+        padding:8px 20px;
+
+        font-size:1rem;
+
+    }
+
+
+}
 
 
 
