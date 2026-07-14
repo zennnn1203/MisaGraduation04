@@ -72,10 +72,8 @@ body {
     width: 60%;
 }
 .left .btn{
-    margin-top:40px;
-    opacity:0;
-    transform:scale(0);
-    animation:showBtn 1s 10s forwards ease-in-out;
+    transform: scale(0);
+    animation: scaleCricle 2s 16s forwards ease-in-out;
 }
 #btn__letter{
     position: relative;
@@ -630,365 +628,197 @@ body {
 }
 
 /* responsive */
-@media screen and (max-width:768px){
-
-    /* =========================
-       TRANG CHÍNH MOBILE
-    ========================= */
-
+@media screen and (max-width:768px) {
+    .flag__birthday{
+        animation-delay: 0.2s;
+    }
+    .flag__birthday .flag__left,
+    .flag__birthday .flag__right{
+        width: 160px;
+    }
+    .flag__left{
+        transform: rotate(-10deg) translate(-20px,20px)!important;
+    }
+    .flag__right{
+        transform: rotate(10deg) translate(20px, 20px) scaleX(-1)!important;
+    }
     #wrapper .content{
-
-        flex-direction:column;
-        padding-top:1rem;
-
+        flex-direction: column;
     }
-
-
-    #wrapper .content .left,
+    #wrapper .content .left{
+        position: unset;
+    }
+    #wrapper .content .left,#wrapper .content .right{
+        width: 100%!important;
+    }
+    #wrapper .content .left .title{
+        font-size: 2rem;
+    }
+    .happy span:nth-child(1){
+        animation-delay: 1s;
+    }
+    .happy span:nth-child(2){
+        animation-delay: 1.2s;
+    }
+    .happy span:nth-child(3){
+        animation-delay: 1.4s;
+    }
+    .happy span:nth-child(4){
+        animation-delay: 1.6s;
+    }
+    .happy span:nth-child(5){
+        animation-delay: 1.8s;
+    }
+    .birthday span:nth-child(1){
+        animation-delay: 2s;
+    }
+    .birthday span:nth-child(2){
+        animation-delay: 2.2s;
+    }
+    .birthday span:nth-child(3){
+        animation-delay: 2.4s;
+    }
+    .birthday span:nth-child(4){
+        animation-delay: 2.6s;
+    }
+    .birthday span:nth-child(5){
+        animation-delay: 2.8s;
+    }
+    .birthday span:nth-child(6){
+        animation-delay: 3s;
+    }
+    .birthday span:nth-child(7){
+        animation-delay: 3.2s;
+    }
+    .birthday span:nth-child(8){
+        animation-delay: 3.4s;
+    }
+    .birthday span:nth-child(9){ animation-delay: 3.6s; }
+    .birthday span:nth-child(10){ animation-delay: 3.8s; }
+    .birthday span:nth-child(11){ animation-delay: 4s; }
+    
+    .title .hat{
+        animation-delay: 3.5s;
+        right: -50px;
+    }
+    .title .hat img{
+        width: 85px;
+    }
+    .date__of__birth, .balloon_one, .balloon_two{
+        display: none;
+    }
+    .btn{
+        position: absolute;
+        bottom: -100px;
+    }
     #wrapper .content .right{
-
-        width:100%!important;
-
+        margin-top: 40px;
     }
-
-
-    .content .left{
-
-        order:1;
-
-    }
-
-
-    .title{
-
-        font-size:2rem;
-
-    }
-
-
-
-    .content .right{
-
-        order:2;
-        margin-top:70px;
-
-    }
-
-
-
     .right .box__account{
-
-        width:100%;
-
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-
-        transform:translateY(700px);
-
-        animation:topBoxImage 4s 4s forwards ease;
-
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        transform: translateY(0);
+        animation: none!important;
     }
-
-
-
     .right .box__account .image{
-
-        width:200px;
-        height:200px;
-
+        width: 200px;
+        height: 200px;
+        transform: scale(0);
+        animation: scaleHeartLetter 2s 4s forwards!important;
     }
-
-
-
     .right .box__account .name{
-
-        position:relative;
-
-        bottom:auto;
-
-        margin-top:20px;
-
-        padding:0 25px;
-
+        padding: 0 20px;
+        transform: scale(0);
+        animation: scaleHeartLetter 2s 5s forwards!important;
     }
-
-
-
     .right .box__account .name span{
-
-        font-size:1rem;
-
-        margin:0 15px;
-
+        font-size: 1rem;
+        margin: 0 20px;
     }
-
-
-
-.left .btn{
-    transform: scale(0);
-    margin-top:35px;
-    animation:scaleCricle .8s 5s forwards;
-}
-
-
-
-    #btn__letter{
-
-        padding:8px 20px;
-
+    .cricle{
+        top: -20px;
+        right: 20px;
+        animation-delay: 6s;
     }
-
-
-
-    .date__of__birth,
-    .balloon_one,
-    .balloon_two{
-
-        display:none;
-
+    .text__cricle{
+        width: 65px;
+        height: 65px;
+        border-width: 2px;
     }
-
-
-
-
-    /* =========================
-          POPUP LÁ THƯ
-    ========================= */
-
-
-
-    .box__letter{
-
-        overflow-y:auto;
-
-        padding:15px 0;
-
+    .text__cricle span{
+        transform-origin: 0 30px;
+        font-size: 0.5rem;
     }
-
-
-
+    .content .right .day, .content .right .month{
+        display: block;
+        /* transform: scale(0); */
+        outline: none;
+    }
+    .decorate_star.star1 {
+        top: 125px;
+        left: 375px;
+        animation-delay: 5.2s;
+    }
+    .decorate_star.star2 {
+        top: 80px;
+        right: 360px;
+        animation-delay: 5.2s;
+    }
+    .decorate_star.star3 {
+        top: 255px;
+        left: 300px;
+        animation-delay: 5.2s;
+    }
+    .decorate_star.star4{
+        animation-delay: 5.2s;
+    }
+    .decorate_star.star5 {
+        bottom: 140px;
+        left: 350px;
+        animation-delay: 5.2s;
+    }
+    .decorate_flower--one{
+        animation-delay: 5.2s;
+    }
+    .decorate_flower--two{
+        display: none;
+    }
+    .decorate_flower--three{
+        top: 45px;
+        animation-delay: 5.2s;
+    }
+    .left .btn{
+        animation-delay: 6s;
+    }
     .box__letter .letter__border{
-
-        width:94vw;
-
-        height:auto;
-
-        min-height:90vh;
-
-
-        position:relative;
-
-        top:auto;
-
-        left:50%;
-
-        transform:translateX(-50%);
-
-
-        margin:20px 0;
-
-
-        padding:12px;
-
-        overflow:visible;
-
+        width: 95%;
     }
-
-
-
-    .letter__border .letter{
-
-
-        height:auto;
-
-        min-height:100%;
-
-
-        display:flex;
-
-        flex-direction:column;
-
-
-        padding-bottom:40px;
-
+    .letter__border .letter .title__letter{
+        font-size: 2rem;
     }
-
-
-
-
-
-    /* =========================
-          ẢNH ĐẦU TIÊN
-    ========================= */
-
-
-    .content__letter{
-
-        display:flex!important;
-
-        flex-direction:column!important;
-
-        height:auto!important;
-
-        padding:0!important;
-
-    }
-
-
-
     .content__letter .left{
-
-        order:1;
-
-
-        width:100%;
-
-        border:none;
-
-
-        padding:0;
-
-        margin-bottom:25px;
-
-
-        display:flex;
-
-        justify-content:center;
-
-        align-items:center;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
-
-
-    #heart__letter{
-
-        width:190px!important;
-
-        height:250px!important;
-
-
-        object-fit:cover;
-
+    .content__letter .left .heart_2{
+        top: 50px;
     }
-
-
-
-
-
-    /* =========================
-          DEAR Ở SAU ẢNH
-    ========================= */
-
-
-    .title__letter{
-
-        order:2;
-
-
-        font-size:2rem!important;
-
-        margin:10px 0 20px;
-
-
-        text-align:center;
-
+    .content__letter .left .heart_3 {
+        bottom: 60px;
+        left: 75px;
     }
-
-
-
-
-
-    /* =========================
-          NỘI DUNG THƯ CUỐI
-    ========================= */
-
-
-    .content__letter .right{
-
-        order:3;
-
-
-        width:100%;
-
-
-        height:auto;
-
-
-        display:flex;
-
-        flex-direction:column;
-
-
+    .content__letter .left .heart_4 {
+        top: 140px;
+        right: 15px;
     }
-
-
-
+    .content__letter .right .love__img.animationOp img{
+        width: 110px;
+    }
     .text__letter{
-
-
-        width:100%;
-
-
-        margin:0!important;
-
-        padding:0 10px!important;
-
-
-        font-size:1.05rem!important;
-
-        line-height:1.8;
-
-
-        text-align:left;
-
+        margin-top: 30px !important; /* thử 60-90px */
+        font-size: 1rem !important;
+        line-height: 1.6;
     }
-
-
-
-    .text__letter p{
-
-        white-space:pre-line;
-
-    }
-
-
-
-
-    /* =========================
-          ẨN STICKER
-    ========================= */
-
-
-#mewmew{
-    display:none !important;
-}
-
-
-
-    /* bỏ tim trang trí nếu muốn sạch */
-
-    .content__letter .heart{
-
-        display:none;
-
-    }
-@keyframes showBtn{
-    0%{
-        opacity:0;
-        transform:scale(0);
-    }
-
-    70%{
-        opacity:1;
-        transform:scale(1.2);
-    }
-
-    100%{
-        opacity:1;
-        transform:scale(1);
-    }
-}
-
 }
