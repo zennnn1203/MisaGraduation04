@@ -748,7 +748,75 @@ body {
         display:none;
 
     }
+    /* ================== FIX POPUP NHẬN THƯ MOBILE ================== */
 
-
+.box__letter .letter__border{
+    width: 92vw;
+    height: 82vh;
+    padding: 10px;
+    border-radius: 20px;
 }
+
+.letter__border .letter{
+    height: 100%;
+}
+
+.letter__border .letter .title__letter{
+    font-size: 2rem;
+}
+
+.letter__border .letter .content__letter{
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 55px);
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* cột ảnh */
+.content__letter .left{
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid var(--color-border);
+    padding: 15px 0;
+}
+
+.content__letter .left #heart__letter{
+    width: 180px;
+    height: 240px;
+}
+
+/* cột thư */
+.content__letter .right{
+    width: 100%;
+    padding: 10px;
+}
+
+.content__letter .right .text__letter{
+    margin-top: 20px;
+    padding: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* sticker chó */
+.content__letter .right #mewmew{
+    width: 55px;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* sticker mèo tim */
+.content__letter .right .love__img{
+    width: 70px;
+    top: -10px;
+    right: 10px;
+}
+
+/* tim trang trí */
+.content__letter .left .heart{
+    transform: scale(.8);
+}
+
+
 }
