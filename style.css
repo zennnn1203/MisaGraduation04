@@ -724,13 +724,11 @@ body {
 
 
 
-    .left .btn{
-
-        margin-top:40px;
-
-        animation:scaleCricle 2s 8s forwards ease-in-out;
-
-    }
+.left .btn{
+    transform: scale(0);
+    margin-top:35px;
+    animation:scaleCricle .8s 5s forwards;
+}
 
 
 
