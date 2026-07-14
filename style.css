@@ -628,197 +628,288 @@ body {
 }
 
 /* responsive */
-@media screen and (max-width:768px) {
-    .flag__birthday{
-        animation-delay: 0.2s;
+/* ================= MOBILE ================= */
+@media screen and (max-width:768px){
+
+    html,body{
+        overflow-x:hidden;
     }
-    .flag__birthday .flag__left,
-    .flag__birthday .flag__right{
-        width: 160px;
+
+    #wrapper{
+        min-height:100vh;
+        overflow:hidden;
     }
+
+    /* banner */
+    .flag__birthday img{
+        width:160px;
+    }
+
     .flag__left{
-        transform: rotate(-10deg) translate(-20px,20px)!important;
+        transform:rotate(-10deg) translate(-20px,20px)!important;
     }
+
     .flag__right{
-        transform: rotate(10deg) translate(20px, 20px) scaleX(-1)!important;
+        transform:rotate(10deg) translate(20px,20px) scaleX(-1)!important;
     }
-    #wrapper .content{
-        flex-direction: column;
+
+
+    /* layout */
+    .content{
+        flex-direction:column;
+        padding-top:2rem;
     }
-    #wrapper .content .left{
-        position: unset;
+
+    .content .left,
+    .content .right{
+        width:100%!important;
     }
-    #wrapper .content .left,#wrapper .content .right{
-        width: 100%!important;
+
+
+    /* title */
+    .title{
+        font-size:2rem;
     }
-    #wrapper .content .left .title{
-        font-size: 2rem;
-    }
-    .happy span:nth-child(1){
-        animation-delay: 1s;
-    }
-    .happy span:nth-child(2){
-        animation-delay: 1.2s;
-    }
-    .happy span:nth-child(3){
-        animation-delay: 1.4s;
-    }
-    .happy span:nth-child(4){
-        animation-delay: 1.6s;
-    }
-    .happy span:nth-child(5){
-        animation-delay: 1.8s;
-    }
-    .birthday span:nth-child(1){
-        animation-delay: 2s;
-    }
-    .birthday span:nth-child(2){
-        animation-delay: 2.2s;
-    }
-    .birthday span:nth-child(3){
-        animation-delay: 2.4s;
-    }
-    .birthday span:nth-child(4){
-        animation-delay: 2.6s;
-    }
-    .birthday span:nth-child(5){
-        animation-delay: 2.8s;
-    }
-    .birthday span:nth-child(6){
-        animation-delay: 3s;
-    }
-    .birthday span:nth-child(7){
-        animation-delay: 3.2s;
-    }
-    .birthday span:nth-child(8){
-        animation-delay: 3.4s;
-    }
-    .birthday span:nth-child(9){ animation-delay: 3.6s; }
-    .birthday span:nth-child(10){ animation-delay: 3.8s; }
-    .birthday span:nth-child(11){ animation-delay: 4s; }
-    
+
     .title .hat{
-        animation-delay: 3.5s;
-        right: -50px;
+        right:-35px;
     }
+
     .title .hat img{
-        width: 85px;
+        width:80px;
     }
-    .date__of__birth, .balloon_one, .balloon_two{
-        display: none;
+
+
+    /* hide */
+    .date__of__birth,
+    .balloon_one,
+    .balloon_two{
+        display:none;
     }
+
+
+    /* button */
     .btn{
-        position: absolute;
-        bottom: -100px;
+        position:absolute;
+        bottom:-80px;
     }
-    #wrapper .content .right{
-        margin-top: 40px;
+
+
+
+    /* avatar */
+    .right{
+        margin-top:60px;
     }
+
+
     .right .box__account{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        transform: translateY(0);
-        animation: none!important;
+        width:100%;
+        display:flex;
+        justify-content:center;
+        transform:none;
+        animation:none!important;
     }
+
+
     .right .box__account .image{
-        width: 200px;
-        height: 200px;
-        transform: scale(0);
-        animation: scaleHeartLetter 2s 4s forwards!important;
+        width:200px;
+        height:200px;
+        animation:scaleHeartLetter 2s 4s forwards!important;
     }
+
+
     .right .box__account .name{
-        padding: 0 20px;
-        transform: scale(0);
-        animation: scaleHeartLetter 2s 5s forwards!important;
+        padding:0 20px;
     }
+
     .right .box__account .name span{
-        font-size: 1rem;
-        margin: 0 20px;
+        font-size:1rem;
+        margin:0 15px;
     }
-    .cricle{
-        top: -20px;
-        right: 20px;
-        animation-delay: 6s;
+
+
+
+    /* ================= LETTER ================= */
+
+
+    .box__letter{
+        overflow:auto;
+        padding:20px 0;
     }
-    .text__cricle{
-        width: 65px;
-        height: 65px;
-        border-width: 2px;
-    }
-    .text__cricle span{
-        transform-origin: 0 30px;
-        font-size: 0.5rem;
-    }
-    .content .right .day, .content .right .month{
-        display: block;
-        /* transform: scale(0); */
-        outline: none;
-    }
-    .decorate_star.star1 {
-        top: 125px;
-        left: 375px;
-        animation-delay: 5.2s;
-    }
-    .decorate_star.star2 {
-        top: 80px;
-        right: 360px;
-        animation-delay: 5.2s;
-    }
-    .decorate_star.star3 {
-        top: 255px;
-        left: 300px;
-        animation-delay: 5.2s;
-    }
-    .decorate_star.star4{
-        animation-delay: 5.2s;
-    }
-    .decorate_star.star5 {
-        bottom: 140px;
-        left: 350px;
-        animation-delay: 5.2s;
-    }
-    .decorate_flower--one{
-        animation-delay: 5.2s;
-    }
-    .decorate_flower--two{
-        display: none;
-    }
-    .decorate_flower--three{
-        top: 45px;
-        animation-delay: 5.2s;
-    }
-    .left .btn{
-        animation-delay: 6s;
-    }
+
+
     .box__letter .letter__border{
-        width: 95%;
+
+        width:92%;
+        height:auto;
+        max-height:90vh;
+
+        padding:12px;
+
+        top:50%;
+        transform:translate(-50%,-50%);
+
+        border-radius:20px;
+
+        overflow:hidden;
     }
-    .letter__border .letter .title__letter{
-        font-size: 2rem;
+
+
+
+    .letter{
+        overflow-y:auto;
+        max-height:85vh;
     }
+
+
+    .letter__border .close{
+
+        right:-5px;
+        top:-5px;
+
+        width:32px;
+        height:32px;
+
+        z-index:20;
+    }
+
+
+
+    /* title thư */
+    .letter .title__letter{
+
+        font-size:2rem!important;
+
+        padding:10px;
+
+        white-space:nowrap;
+    }
+
+
+
+    /* đổi từ 2 cột thành dọc */
+
+    .letter .content__letter{
+
+        display:flex;
+        flex-direction:column;
+
+        padding:10px!important;
+
+        height:auto!important;
+    }
+
+
+
+    /* ảnh */
+
     .content__letter .left{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+        width:100%!important;
+
+        height:auto!important;
+
+        border-right:none!important;
+
+        padding:10px!important;
+
+        display:flex;
+
+        justify-content:center;
     }
-    .content__letter .left .heart_2{
-        top: 50px;
+
+
+    #heart__letter{
+
+        width:180px!important;
+        height:240px!important;
+
+        object-fit:cover;
+
+        border-radius:15px;
     }
-    .content__letter .left .heart_3 {
-        bottom: 60px;
-        left: 75px;
+
+
+
+    /* chữ */
+
+    .content__letter .right{
+
+        width:100%!important;
+
+        height:auto;
+
+        position:relative;
+
     }
-    .content__letter .left .heart_4 {
-        top: 140px;
-        right: 15px;
-    }
-    .content__letter .right .love__img.animationOp img{
-        width: 110px;
-    }
+
+
+
     .text__letter{
-        margin-top: 30px !important; /* thử 60-90px */
-        font-size: 1rem !important;
-        line-height: 1.6;
+
+        margin-top:30px!important;
+
+        padding:10px!important;
+
+        font-size:1.05rem!important;
+
+        line-height:1.8;
+
+        text-align:left;
+
+        max-height:280px;
+
+        overflow-y:auto;
+
     }
+
+
+
+    /* ảnh mèo */
+
+    #mewmew{
+
+        width:60px!important;
+
+        right:10px!important;
+
+        bottom:0!important;
+
+    }
+
+
+    .love__img{
+
+        top:-20px!important;
+        right:10px!important;
+    }
+
+
+    .love__img img{
+
+        width:90px!important;
+
+    }
+
+
+    /* hearts */
+
+    .heart_2{
+        top:20px!important;
+        right:20px!important;
+    }
+
+
+    .heart_3{
+        bottom:30px!important;
+        left:40px!important;
+    }
+
+
+    .heart_4{
+        top:100px!important;
+        right:10px!important;
+    }
+
+
 }
