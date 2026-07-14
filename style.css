@@ -628,192 +628,290 @@ body {
 }
 
 /* responsive */
+/* ================= MOBILE HOÀN CHỈNH ================= */
+
 @media screen and (max-width:768px){
 
-    #wrapper .content{
-        flex-direction:column;
-        padding-top:1rem;
+
+    /* ===== MAIN ===== */
+
+    #wrapper{
+        overflow-x:hidden;
     }
+
+
+    #wrapper .content{
+
+        flex-direction:column;
+
+        padding-top:1rem;
+
+    }
+
 
     #wrapper .content .left,
     #wrapper .content .right{
+
         width:100% !important;
+
     }
+
+
 
 
     /* ===== TIÊU ĐỀ ===== */
 
+
     .content>.left{
+
         order:1;
+
     }
 
+
     .title{
+
         font-size:2rem;
+
     }
+
+
 
 
     /* ===== ẢNH MISA ===== */
 
+
     .content>.right{
+
         order:2;
+
         margin-top:70px;
+
     }
+
+
 
     .right .box__account{
+
         width:100%;
+
         display:flex;
+
         flex-direction:column;
+
         align-items:center;
 
+
         transform:translateY(700px);
+
         animation:topBoxImage 4s 4s forwards ease;
+
     }
+
 
 
     .right .box__account .image{
+
         width:200px;
+
         height:200px;
+
     }
+
 
 
     .right .box__account .name{
+
         position:relative;
+
         bottom:auto;
+
         margin-top:18px;
+
         padding:0 25px;
+
     }
+
 
 
     .right .box__account .name span{
+
         font-size:1rem;
+
         margin:0 15px;
+
     }
+
 
 
 
     /* ===== NÚT NHẬN THƯ ===== */
 
+
     .left .btn{
+
         margin-top:35px;
-        animation:scaleCricle 2s 8s forwards ease-in-out;
+
     }
+
 
 
     #btn__letter{
-        margin-top:0;
+
         padding:8px 20px;
+
+        font-size:1rem;
+
     }
+
+
 
 
     .date__of__birth,
     .balloon_one,
     .balloon_two{
+
         display:none;
+
     }
 
 
 
-    /* ================= POPUP LÁ THƯ ================= */
+
+
+    /* ================= POPUP THƯ ================= */
 
 
     .box__letter{
+
+        width:100%;
+
+        height:100%;
+
         overflow-y:auto;
+
         padding:20px 0;
+
     }
+
+
 
 
     .box__letter .letter__border{
 
-        width:94vw;
-        height:auto;
+        width:94vw !important;
+
+        height:auto !important;
+
         max-height:90vh;
 
         top:50%;
+
         left:50%;
+
 
         transform:translate(-50%,-50%);
 
-        padding:12px;
+
+        padding:10px;
 
         overflow:hidden;
+
     }
+
+
 
 
 
     .letter__border .letter{
 
         height:auto;
-        min-height:100%;
+
+        min-height:500px;
 
         padding:15px;
-    }
-
-
-
-    .letter__border .letter .title__letter{
-
-        font-size:2rem;
 
     }
 
 
 
 
-    /* ===== NỘI DUNG THƯ ===== */
+
+    .letter__border .title__letter{
+
+        font-size:2rem !important;
+
+    }
+
+
+
+
+
+    /* ===== XÓA SỌC GIỮA ===== */
 
 
     .letter__border .content__letter{
 
-        display:flex;
+        display:flex !important;
 
-        flex-direction:column;
+        flex-direction:column !important;
 
-        width:100%;
-        height:auto;
+        height:auto !important;
 
-        padding:10px;
+        width:100% !important;
+
+        padding:10px !important;
 
     }
 
 
-
-    /* ===== ẢNH BÊN TRÁI ===== */
 
 
     .letter__border .content__letter .left{
 
-        width:100%;
 
-        border-right:none !important;
-        border-bottom:none !important;
+        width:100% !important;
 
-        padding:0;
+        height:auto;
+
+
+        border:none !important;
+
+
+        padding:0 !important;
+
 
         margin-bottom:20px;
 
+
         display:flex;
+
         justify-content:center;
+
+        align-items:center;
+
 
     }
 
 
 
-    .letter__border .content__letter .left #heart__letter{
 
-        width:190px;
-        height:250px;
+    /* ===== ẢNH TRONG THƯ ===== */
+
+
+    .letter__border #heart__letter{
+
+
+        width:190px !important;
+
+        height:250px !important;
+
 
         object-fit:cover;
 
+
         margin:auto;
 
-    }
-
-
-
-    .letter__border .content__letter .left .heart{
-
-        transform:scale(.8);
 
     }
 
@@ -821,75 +919,100 @@ body {
 
 
 
-    /* ===== PHẦN THƯ BÊN PHẢI ===== */
+    /* ===== KHU VỰC CHỮ ===== */
 
 
     .letter__border .content__letter .right{
 
-        width:100%;
 
-        min-height:350px;
+        width:100% !important;
 
-        position:relative;
 
-        display:block;
+        min-height:380px;
+
+
+        position:relative !important;
+
+
+        display:block !important;
+
 
     }
 
 
 
 
-    /* ảnh tim */
 
     .letter__border .love__img{
 
-        position:relative;
 
-        top:auto;
-        right:auto;
+        position:relative !important;
+
+
+        top:auto !important;
+
+        right:auto !important;
+
 
         text-align:center;
 
+
         margin-bottom:10px;
 
+
     }
+
+
 
 
 
     .letter__border .love__img img{
 
+
         width:80px;
+
 
     }
 
 
 
 
-    /* chữ thư */
+
 
     .letter__border .text__letter{
 
-        width:100%;
 
-        margin:0;
+        width:100% !important;
 
-        padding:0 0 70px 0;
+
+        margin:0 !important;
+
+
+        padding:0 0 90px 0 !important;
+
 
         font-size:1.05rem;
 
+
         line-height:1.8;
+
 
         text-align:left;
 
+
     }
+
 
 
 
     .letter__border .text__letter p{
 
+
         white-space:pre-line;
 
+
     }
+
 
 
 
@@ -899,17 +1022,27 @@ body {
 
     .letter__border #mewmew{
 
-        position:absolute;
 
-        width:65px;
+        position:absolute !important;
 
-        right:5px;
 
-        bottom:5px;
+        width:70px !important;
+
+
+        right:0 !important;
+
+
+        bottom:0 !important;
+
+
+        margin:0 !important;
+
 
         display:block;
 
+
     }
+
 
 
 }
