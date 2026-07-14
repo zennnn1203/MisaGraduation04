@@ -822,3 +822,127 @@ body {
         line-height: 1.6;
     }
 }
+/* ================= MOBILE POPUP LETTER ================= */
+@media screen and (max-width:768px){
+
+    .box__letter .letter__border{
+        width:95%;
+        height:auto;
+        max-height:90vh;
+        padding:12px;
+        overflow-y:auto;
+        border-radius:20px;
+    }
+
+    .letter__border .letter{
+        height:auto;
+        padding:15px;
+    }
+
+    .letter__border .letter .title__letter{
+        font-size:2rem;
+        margin-bottom:15px;
+    }
+
+    /* Chuyển thành layout dọc */
+    .letter__border .letter .content__letter{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        height:auto;
+        padding:0;
+    }
+
+    /* Hai cột thành một */
+    .content__letter .left,
+    .content__letter .right{
+        width:100%;
+        border:none;
+        padding:0;
+    }
+
+    /* Xóa đường kẻ giữa */
+    .content__letter .left{
+        border-right:none;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-bottom:20px;
+        min-height:auto;
+    }
+
+    /* Ảnh */
+    .content__letter .left #heart__letter{
+        width:220px;
+        max-width:100%;
+        height:auto;
+        opacity:1;
+        border-radius:18px;
+        border:5px solid #fff;
+        object-fit:cover;
+    }
+
+    /* Tim trang trí */
+    .content__letter .left .heart{
+        transform:scale(.8);
+    }
+
+    .content__letter .left .heart_1{
+        top:20px;
+        left:20px;
+    }
+
+    .content__letter .left .heart_2{
+        top:30px;
+        right:20px;
+    }
+
+    .content__letter .left .heart_3{
+        bottom:20px;
+        left:40px;
+    }
+
+    .content__letter .left .heart_4{
+        bottom:40px;
+        right:30px;
+    }
+
+    /* Phần nội dung */
+    .content__letter .right{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    /* Sticker trái tim */
+    .content__letter .right .love__img{
+        position:static;
+        opacity:1;
+        margin-bottom:10px;
+    }
+
+    .content__letter .right .love__img img{
+        width:70px;
+    }
+
+    /* Nội dung thư */
+    .content__letter .right .text__letter{
+        margin-top:0;
+        padding:0;
+        font-size:1rem;
+        line-height:1.8;
+        text-align:left;
+        width:100%;
+    }
+
+    /* Mèo */
+    .content__letter .right #mewmew{
+        position:static;
+        opacity:1;
+        width:55px;
+        margin-top:15px;
+        align-self:flex-end;
+    }
+
+}
