@@ -628,90 +628,236 @@ body {
 }
 
 /* responsive */
-/* ================= MOBILE HOÀN CHỈNH ================= */
-
-/* ================= MOBILE LETTER ORDER ================= */
-
 @media screen and (max-width:768px){
 
-
-    /* Khung popup */
-    .box__letter{
-        overflow-y:auto;
-        padding:15px 0;
+    #wrapper{
+        overflow:hidden;
     }
+
+
+    /* ======================
+       PHẦN TRANG CHÍNH
+    ====================== */
+
+    #wrapper .content{
+        flex-direction:column;
+        padding-top:1rem;
+    }
+
+
+    #wrapper .content .left,
+    #wrapper .content .right{
+        width:100%!important;
+    }
+
+
+    .content .left{
+        order:1;
+    }
+
+
+    .title{
+        font-size:2rem;
+    }
+
+
+    .content .right{
+        order:2;
+        margin-top:70px;
+    }
+
+
+    .right .box__account{
+        width:100%;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+
+        transform:translateY(700px);
+        animation:topBoxImage 4s 4s forwards ease;
+    }
+
+
+    .right .box__account .image{
+        width:200px;
+        height:200px;
+    }
+
+
+    .right .box__account .name{
+
+        position:relative;
+        bottom:auto;
+
+        margin-top:20px;
+
+        padding:0 25px;
+
+    }
+
+
+    .right .box__account .name span{
+        font-size:1rem;
+        margin:0 15px;
+    }
+
+
+    .left .btn{
+
+        margin-top:40px;
+
+        animation:scaleCricle 2s 8s forwards ease-in-out;
+
+    }
+
+
+    #btn__letter{
+
+        padding:8px 20px;
+
+    }
+
+
+    .date__of__birth,
+    .balloon_one,
+    .balloon_two{
+
+        display:none;
+
+    }
+
+
+
+    /* ======================
+          POPUP LÁ THƯ
+       THỨ TỰ:
+       1. DEAR
+       2. ẢNH
+       3. THƯ
+       4. STICKER
+    ====================== */
+
+
+    .box__letter{
+
+        position:fixed;
+
+        overflow-y:auto;
+
+        padding:20px 0;
+
+    }
+
 
 
     .box__letter .letter__border{
 
-        width:94vw !important;
-        height:auto !important;
-        max-height:90vh;
+        position:relative;
 
-        top:50%;
+        width:94vw;
+
+        height:auto;
+
+        min-height:90vh;
+
+
+        top:auto;
         left:50%;
 
-        transform:translate(-50%,-50%);
 
-        padding:10px;
+        transform:translateX(-50%);
 
-        overflow:auto;
+
+        margin:20px 0;
+
+
+        padding:12px;
+
+
+        overflow:visible;
+
     }
 
 
 
     .letter__border .letter{
 
-        display:flex !important;
-
-        flex-direction:column !important;
+        width:100%;
 
         height:auto;
 
-        padding:15px;
+        min-height:100%;
+
+
+        padding-bottom:40px;
 
     }
 
+
+
+
+    /* DEAR HOÀNG CHÂU */
+
+    .letter__border .title__letter{
+
+        order:1;
+
+        font-size:2rem;
+
+        margin-bottom:25px;
+
+    }
+
+
+
+
+
+    .letter__border .content__letter{
+
+        display:flex;
+
+        flex-direction:column;
+
+
+        width:100%;
+
+        height:auto;
+
+
+        padding:0;
+
+
+        overflow:visible;
+
+    }
 
 
 
 
     /* =================
-       ĐƯA ẢNH LÊN ĐẦU
+          ẢNH
     ================= */
 
 
-    .letter__border .content__letter{
-
-        display:flex !important;
-
-        flex-direction:column !important;
-
-        width:100% !important;
-
-        height:auto !important;
-
-        padding:0 !important;
+    .content__letter .left{
 
         order:1;
 
-    }
 
+        width:100%;
 
-
-    .letter__border .content__letter .left{
-
-        order:1;
-
-        width:100% !important;
 
         height:auto;
 
-        border:none !important;
 
-        padding:0 !important;
+        border:none;
 
-        margin-bottom:15px;
+
+        padding:0;
+
+
+        margin-bottom:25px;
 
 
         display:flex;
@@ -724,71 +870,69 @@ body {
 
 
 
-    .letter__border #heart__letter{
+    .content__letter .left #heart__letter{
 
-        width:190px !important;
+        width:190px!important;
 
-        height:250px !important;
+        height:250px!important;
+
 
         object-fit:cover;
 
+
+        margin:auto;
+
     }
 
 
 
 
+    /* tim bay quanh ảnh */
+
+    .content__letter .left .heart{
+
+        transform:scale(.8);
+
+    }
+
+
+
+
+
     /* =================
-       DEAR HOÀNG CHÂU
+          PHẦN THƯ
     ================= */
 
 
-    .letter__border .title__letter{
+    .content__letter .right{
 
-        order:2 !important;
 
-        display:block;
+        order:2;
+
 
         width:100%;
 
-        text-align:center;
 
-        font-size:2rem !important;
-
-        margin:10px 0 15px;
-
-    }
+        height:auto;
 
 
+        display:flex;
 
-
-
-    /* =================
-       PHẦN THƯ
-    ================= */
-
-
-    .letter__border .content__letter .right{
-
-        order:3;
-
-        width:100% !important;
-
-        min-height:330px;
-
-        position:relative !important;
-
-        display:flex !important;
 
         flex-direction:column;
 
+
+        position:relative;
+
     }
 
 
 
 
-    /* bỏ hình tim góc trên */
 
-    .letter__border .love__img{
+    /* bỏ sticker tim trên */
+
+    .content__letter .love__img{
 
         display:none;
 
@@ -797,27 +941,34 @@ body {
 
 
 
-    .letter__border .text__letter{
 
-        order:1;
+    .content__letter .text__letter{
+
 
         width:100%;
 
-        margin:0 !important;
 
-        padding:0 0 70px 0 !important;
+        margin:0!important;
 
-        font-size:1.05rem;
+
+        padding:0 10px!important;
+
+
+        font-size:1.05rem!important;
+
 
         line-height:1.8;
 
+
         text-align:left;
+
 
     }
 
 
 
-    .letter__border .text__letter p{
+
+    .text__letter p{
 
         white-space:pre-line;
 
@@ -828,34 +979,43 @@ body {
 
 
     /* =================
-       STICKER CHÓ CUỐI
+          STICKER CUỐI
     ================= */
 
 
-    .letter__border #mewmew{
-
-        order:2;
-
-        position:absolute !important;
-
-        width:65px !important;
-
-        right:0 !important;
-
-        bottom:0 !important;
-
-        margin:0 !important;
-
-    }
+    .content__letter .right #mewmew{
 
 
+        order:3;
 
 
-    /* bỏ sọc giữa */
+        position:relative!important;
 
-    .letter__border .content__letter .left{
 
-        border-right:none !important;
+        width:70px!important;
+
+
+        height:auto;
+
+
+        right:auto!important;
+
+
+        bottom:auto!important;
+
+
+
+        margin-top:35px!important;
+
+
+        margin-left:auto!important;
+
+
+        margin-right:10px!important;
+
+
+
+        display:block;
 
     }
 
