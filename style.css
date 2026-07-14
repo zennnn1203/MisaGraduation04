@@ -906,4 +906,23 @@ body {
     .date__of__birth{
         display:none !important;
     }
+    /* Xóa sọc giữa ảnh và chữ trên mobile */
+    .content__letter .left{
+        border-right: none !important;
+    }
+
+    /* Ảnh trong thư to hơn */
+    .content__letter .left #heart__letter{
+        width: 220px !important;
+        height: 300px !important;
+        object-fit: cover;
+    }
+
+    /* Căn giữa ảnh */
+    .content__letter .left{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
 }
