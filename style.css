@@ -628,6 +628,7 @@ body {
 }
 
 /* responsive */
+/* ======================= MOBILE ======================= */
 @media screen and (max-width:768px){
 
     #wrapper .content{
@@ -640,30 +641,26 @@ body {
         width:100%!important;
     }
 
-
-    /* ===== HAPPY BIRTHDAY Ở TRÊN ===== */
+    /* HAPPY BIRTHDAY */
 
     .content .left{
         order:1;
         position:relative;
     }
 
-
     .title{
         font-size:2rem;
     }
 
-
-    /* ===== PHẦN MISA Ở DƯỚI ===== */
+    /* PHẦN ẢNH */
 
     .content .right{
         order:2;
-        margin-top:80px;
+        margin-top:70px;
         display:flex;
         flex-direction:column;
         align-items:center;
     }
-
 
     .right .box__account{
         width:100%;
@@ -673,150 +670,163 @@ body {
         align-items:center;
 
         transform:translateY(700px);
-        animation: topBoxImage 4s 4s forwards ease;
+        animation:topBoxImage 4s 4s forwards ease;
     }
-
 
     .right .box__account .image{
-
         width:200px;
         height:200px;
-
-        transform:none;
-
         animation:none!important;
     }
-
 
     .right .box__account .name{
-
         position:relative;
         bottom:auto;
-
         margin-top:20px;
-
         padding:0 25px;
-
-        transform:none;
-
         animation:none!important;
     }
-
 
     .right .box__account .name span{
         font-size:1rem;
         margin:0 15px;
     }
 
-
-
-    /* ===== NÚT NHẬN THƯ NÈ DƯỚI MISA ===== */
-
+    /* NÚT NHẬN THƯ */
 
     .left .btn{
-
-        position:relative;
-
         order:3;
-
         margin-top:40px;
-
-        transform:scale(0);
-
         animation:scaleCricle 2s 8s forwards ease-in-out;
     }
 
-
     #btn__letter{
-
         margin-top:0;
-
-        font-size:1rem;
-
         padding:8px 20px;
-
+        font-size:1rem;
     }
-
-
-
-    /* ===== ẨN THỨ KHÔNG CẦN TRÊN MOBILE ===== */
 
     .date__of__birth,
     .balloon_one,
     .balloon_two{
-
         display:none;
-
     }
-    /* ================== FIX POPUP NHẬN THƯ MOBILE ================== */
 
-.box__letter .letter__border{
-    width: 92vw;
-    height: 82vh;
-    padding: 10px;
-    border-radius: 20px;
-}
+    /* ================= POPUP THƯ ================= */
 
-.letter__border .letter{
-    height: 100%;
-}
+    .box__letter{
+        overflow-y:auto;
+        padding:20px 0;
+    }
 
-.letter__border .letter .title__letter{
-    font-size: 2rem;
-}
+    .box__letter .letter__border{
+        position:relative;
 
-.letter__border .letter .content__letter{
-    display: flex;
-    flex-direction: column;
-    height: calc(100% - 55px);
-    padding: 10px;
-    overflow-y: auto;
-}
+        width:94vw;
+        height:auto;
 
-/* cột ảnh */
-.content__letter .left{
-    width: 100%;
-    border-right: none;
-    border-bottom: 2px solid var(--color-border);
-    padding: 15px 0;
-}
+        top:0;
+        left:50%;
+        transform:translateX(-50%);
 
-.content__letter .left #heart__letter{
-    width: 180px;
-    height: 240px;
-}
+        margin:20px 0;
 
-/* cột thư */
-.content__letter .right{
-    width: 100%;
-    padding: 10px;
-}
+        padding:12px;
+        border-radius:18px;
+    }
 
-.content__letter .right .text__letter{
-    margin-top: 20px;
-    padding: 0;
-    font-size: 1.05rem;
-    line-height: 1.7;
-}
+    .letter__border .letter{
+        height:auto;
+        padding:15px;
+    }
 
-/* sticker chó */
-.content__letter .right #mewmew{
-    width: 55px;
-    right: 10px;
-    bottom: 10px;
-}
+    .letter__border .letter .title__letter{
+        font-size:2rem;
+    }
 
-/* sticker mèo tim */
-.content__letter .right .love__img{
-    width: 70px;
-    top: -10px;
-    right: 10px;
-}
+    .letter__border .letter .content__letter{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
 
-/* tim trang trí */
-.content__letter .left .heart{
-    transform: scale(.8);
-}
+        width:100%;
+        height:auto;
 
+        padding:0;
+        overflow:visible;
+    }
+
+    /* ẢNH */
+
+    .content__letter .left{
+        width:100%;
+        height:auto;
+
+        border:none;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        padding:0;
+        margin-bottom:15px;
+    }
+
+    .content__letter .left #heart__letter{
+        width:190px;
+        height:250px;
+        object-fit:cover;
+    }
+
+    .content__letter .left .heart{
+        transform:scale(.8);
+    }
+
+    /* PHẦN CHỮ */
+
+    .content__letter .right{
+        width:100%;
+        height:auto;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .content__letter .right .love__img{
+        position:relative;
+        top:0;
+        right:0;
+
+        width:70px;
+
+        margin-bottom:10px;
+    }
+
+    .content__letter .right .text__letter{
+        width:100%;
+
+        margin:0;
+        padding:0;
+
+        font-size:1.05rem;
+        line-height:1.8;
+
+        text-align:left;
+    }
+
+    /* CON CHÓ */
+
+    .content__letter .right #mewmew{
+        position:relative;
+
+        right:auto;
+        bottom:auto;
+
+        width:55px;
+
+        margin-top:15px;
+        align-self:flex-end;
+    }
 
 }
