@@ -72,8 +72,8 @@ body {
     width: 60%;
 }
 .left .btn{
-    transform: scale(0);
-    animation: scaleCricle 2s 16s forwards ease-in-out;
+    margin-top:40px;
+    animation:scaleCricle .8s forwards;
 }
 #btn__letter{
     position: relative;
@@ -961,12 +961,9 @@ body {
     ========================= */
 
 
-    #mewmew,
-    .love__img{
-
-        display:none!important;
-
-    }
+#mewmew{
+    display:none !important;
+}
 
 
 
