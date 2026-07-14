@@ -826,66 +826,43 @@ body {
 
     /* Popup */
     .box__letter .letter__border{
-        width:95% !important;
-        max-height:90vh !important;
+        width:95%;
         height:auto !important;
+        max-height:90vh;
         overflow-y:auto;
+        padding:15px;
     }
 
     .letter__border .letter{
         height:auto !important;
+        min-height:unset;
     }
 
-    /* Bỏ layout 2 cột */
+    /* Nội dung */
     .letter__border .letter .content__letter{
-        display:block !important;
+        display:flex;
+        flex-direction:column;
         height:auto !important;
-        padding:20px !important;
+        padding:15px 10px 20px;
+    }
+
+    /* Bỏ chia đôi */
+    .content__letter .left,
+    .content__letter .right{
+        width:100%;
+        border:none;
     }
 
     /* Ảnh */
     .content__letter .left{
-        width:100% !important;
-        border-right:none !important;
-        padding:0 !important;
-        display:flex;
-        justify-content:center;
-        align-items:center;
+        padding:0;
         margin-bottom:20px;
     }
 
     .content__letter .left #heart__letter{
-        width:220px;
+        width:150px;
         height:auto;
-    }
-
-    /* Nội dung */
-    .content__letter .right{
-        width:100% !important;
-        position:static !important;
-    }
-
-    .content__letter .right .text__letter{
-        margin-top:0 !important;
-        padding:0 !important;
-        font-size:18px !important;
-        line-height:1.8;
-    }
-
-    /* Bỏ absolute */
-    .content__letter .right .love__img{
-        position:static !important;
-        opacity:1 !important;
-        margin:0 auto 15px;
-        text-align:center;
-    }
-
-    .content__letter .right #mewmew{
-        position:static !important;
-        opacity:1 !important;
-        display:block;
-        margin-left:auto;
-        margin-top:15px;
+        border-width:4px;
     }
 
     /* Tim */
@@ -893,10 +870,37 @@ body {
         transform:scale(.8);
     }
 
-    /* Tiêu đề */
-    .letter__border .letter .title__letter{
-        font-size:2rem;
-        margin-bottom:20px;
+    /* Nội dung thư */
+    .content__letter .right{
+        position:static;
+    }
+
+    .content__letter .right .text__letter{
+        margin-top:15px;
+        padding:0;
+        font-size:17px;
+        line-height:1.8;
+    }
+
+    /* Sticker */
+    .content__letter .right .love__img{
+        position:static;
+        opacity:1;
+        text-align:center;
+        margin-bottom:10px;
+    }
+
+    .content__letter .right .love__img img{
+        width:70px;
+    }
+
+    /* Mèo */
+    .content__letter .right #mewmew{
+        position:static;
+        opacity:1;
+        width:55px;
+        display:block;
+        margin:15px 0 0 auto;
     }
 
 }
