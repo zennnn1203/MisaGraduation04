@@ -907,5 +907,7 @@ body {
         display:block;
         margin:15px 0 0 auto;
     }
-
+    .date__of__birth{
+        display:none !important;
+    }
 }
