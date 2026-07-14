@@ -822,7 +822,13 @@ body {
         line-height: 1.6;
     }
 }
+/* ================= MOBILE ================= */
 @media screen and (max-width:768px){
+
+    /* Ẩn ngày tháng */
+    .date__of__birth{
+        display:none !important;
+    }
 
     /* Popup */
     .box__letter .letter__border{
@@ -835,34 +841,41 @@ body {
 
     .letter__border .letter{
         height:auto !important;
-        min-height:unset;
     }
 
-    /* Nội dung */
+    /* Nội dung thư */
     .letter__border .letter .content__letter{
         display:flex;
         flex-direction:column;
+        align-items:center;
         height:auto !important;
-        padding:15px 10px 20px;
+        padding:15px;
     }
 
-    /* Bỏ chia đôi */
-    .content__letter .left,
-    .content__letter .right{
+    /* Bỏ chia đôi và xóa sọc */
+    .letter__border .letter .content__letter .left,
+    .letter__border .letter .content__letter .right{
         width:100%;
-        border:none;
     }
 
-    /* Ảnh */
-    .content__letter .left{
+    .letter__border .letter .content__letter .left{
+        border-right:none !important;
+        display:flex;
+        justify-content:center;
+        align-items:center;
         padding:0;
         margin-bottom:20px;
     }
 
+    /* Ảnh */
     .content__letter .left #heart__letter{
-        width:150px;
-        height:auto;
-        border-width:4px;
+        width:220px;
+        height:300px;
+        object-fit:cover;
+        display:block;
+        margin:0 auto;
+        border:5px solid #fff;
+        border-radius:18px;
     }
 
     /* Tim */
@@ -870,13 +883,14 @@ body {
         transform:scale(.8);
     }
 
-    /* Nội dung thư */
+    /* Khung chữ */
     .content__letter .right{
         position:static;
+        text-align:left;
     }
 
     .content__letter .right .text__letter{
-        margin-top:15px;
+        margin-top:10px;
         padding:0;
         font-size:17px;
         line-height:1.8;
@@ -885,7 +899,7 @@ body {
     /* Sticker */
     .content__letter .right .love__img{
         position:static;
-        opacity:1;
+        opacity:1 !important;
         text-align:center;
         margin-bottom:10px;
     }
@@ -897,32 +911,9 @@ body {
     /* Mèo */
     .content__letter .right #mewmew{
         position:static;
-        opacity:1;
+        opacity:1 !important;
         width:55px;
         display:block;
         margin:15px 0 0 auto;
     }
-
-    .date__of__birth{
-        display:none !important;
-    }
-    /* Xóa sọc giữa ảnh và chữ trên mobile */
-    .content__letter .left{
-        border-right: none !important;
-    }
-
-    /* Ảnh trong thư to hơn */
-    .content__letter .left #heart__letter{
-        width: 220px !important;
-        height: 300px !important;
-        object-fit: cover;
-    }
-
-    /* Căn giữa ảnh */
-    .content__letter .left{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-
 }
