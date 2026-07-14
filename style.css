@@ -629,6 +629,7 @@ body {
 
 /* responsive */
 /* ======================= MOBILE ======================= */
+/* ======================= MOBILE ======================= */
 @media screen and (max-width:768px){
 
     #wrapper .content{
@@ -638,34 +639,29 @@ body {
 
     #wrapper .content .left,
     #wrapper .content .right{
-        width:100%!important;
+        width:100% !important;
     }
 
-    /* HAPPY BIRTHDAY */
+    /* Happy Graduation */
 
-    .content .left{
+    .content>.left{
         order:1;
-        position:relative;
     }
 
     .title{
         font-size:2rem;
     }
 
-    /* PHẦN ẢNH */
+    /* Ảnh đại diện */
 
-    .content .right{
+    .content>.right{
         order:2;
         margin-top:70px;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
     }
 
     .right .box__account{
         width:100%;
         display:flex;
-        justify-content:center;
         flex-direction:column;
         align-items:center;
 
@@ -676,15 +672,13 @@ body {
     .right .box__account .image{
         width:200px;
         height:200px;
-        animation:none!important;
     }
 
     .right .box__account .name{
         position:relative;
         bottom:auto;
-        margin-top:20px;
+        margin-top:18px;
         padding:0 25px;
-        animation:none!important;
     }
 
     .right .box__account .name span{
@@ -692,18 +686,16 @@ body {
         margin:0 15px;
     }
 
-    /* NÚT NHẬN THƯ */
+    /* Nút */
 
     .left .btn{
-        order:3;
-        margin-top:40px;
+        margin-top:35px;
         animation:scaleCricle 2s 8s forwards ease-in-out;
     }
 
     #btn__letter{
         margin-top:0;
         padding:8px 20px;
-        font-size:1rem;
     }
 
     .date__of__birth,
@@ -720,24 +712,21 @@ body {
     }
 
     .box__letter .letter__border{
-        position:relative;
-
         width:94vw;
         height:auto;
+        max-height:90vh;
 
-        top:0;
+        top:50%;
         left:50%;
-        transform:translateX(-50%);
-
-        margin:20px 0;
+        transform:translate(-50%,-50%);
 
         padding:12px;
-        border-radius:18px;
+        overflow-y:auto;
     }
 
     .letter__border .letter{
         height:auto;
-        padding:15px;
+        min-height:100%;
     }
 
     .letter__border .letter .title__letter{
@@ -747,86 +736,71 @@ body {
     .letter__border .letter .content__letter{
         display:flex;
         flex-direction:column;
-        align-items:center;
-
         width:100%;
         height:auto;
-
-        padding:0;
-        overflow:visible;
+        padding:10px;
     }
 
     /* ẢNH */
 
-    .content__letter .left{
+    .letter__border .content__letter .left{
         width:100%;
-        height:auto;
-
         border:none;
-
-        display:flex;
-        justify-content:center;
-        align-items:center;
-
         padding:0;
-        margin-bottom:15px;
+        margin-bottom:20px;
     }
 
-    .content__letter .left #heart__letter{
+    .letter__border .content__letter .left #heart__letter{
         width:190px;
         height:250px;
-        object-fit:cover;
+        display:block;
+        margin:auto;
     }
 
-    .content__letter .left .heart{
+    .letter__border .content__letter .left .heart{
         transform:scale(.8);
     }
 
-    /* PHẦN CHỮ */
+    /* BÊN PHẢI */
 
-    .content__letter .right{
+    .letter__border .content__letter .right{
         width:100%;
-        height:auto;
-
-        display:flex;
-        flex-direction:column;
-        align-items:center;
+        position:relative;
     }
 
-    .content__letter .right .love__img{
+    .letter__border .love__img{
         position:relative;
         top:0;
         right:0;
-
-        width:70px;
-
-        margin-bottom:10px;
+        text-align:center;
+        margin-bottom:12px;
     }
 
-    .content__letter .right .text__letter{
-        width:100%;
+    .letter__border .love__img img{
+        width:90px;
+    }
 
+    .letter__border .text__letter{
         margin:0;
         padding:0;
-
         font-size:1.05rem;
         line-height:1.8;
+    }
 
-        text-align:left;
+    .letter__border .text__letter p{
+        white-space:pre-line;
     }
 
     /* CON CHÓ */
 
-    .content__letter .right #mewmew{
+    .letter__border #mewmew{
         position:relative;
+        display:block;
+        width:65px;
 
         right:auto;
         bottom:auto;
 
-        width:55px;
-
-        margin-top:15px;
-        align-self:flex-end;
+        margin:15px 0 0 auto;
     }
-
 }
