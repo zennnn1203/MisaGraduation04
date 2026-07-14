@@ -824,6 +824,11 @@ body {
 }
 @media screen and (max-width:768px){
 
+     .content .right .day,
+    .content .right .month{
+        display:none !important;
+    }
+
     /* Popup */
     .box__letter .letter__border{
         width:95%;
